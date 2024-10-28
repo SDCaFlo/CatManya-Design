@@ -1,0 +1,115 @@
+/* Estilo para la web CatManya */
+
+/* Estilos generales */
+
+
+/* Header */
+header {
+    background-color: #5dacbd;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+/* Body */
+body{
+    background-color: #e0ebeb;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+/* Footer */
+footer{
+    background-color: #24527a;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+/* Estilos específicos */
+/*header*/
+
+header div h1{
+    font-size: 50px;
+    font-style:oblique;
+    font-weight: bolder;
+}
+
+
+/*body*/
+
+section.post-preview {
+    background-color: #a7bcb9;
+    font-size: 25px;
+    outline: auto;
+}
+
+section.post-preview article h3{
+    background-color: #a7bcb9;
+    font-size: 20px;
+}
+
+section.post-preview article p{
+    font-size: 15px;
+    font-style: italic;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/*body-posts*/
+
+.generic-post {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    outline: auto;
+}
+
+.generic-post h1{
+    font-size: 50px;
+    font-style: italic;
+}
+
+.generic-post p{
+    font-size: 20px;
+}
+
+/*body-comment-section*/
+.comment-section {
+    background-color: #5dacbd;
+    font-size: 20px;
+}
+
+.comment-section article header{
+    font-style: italic;
+    font-size: 15px;
+}
+
+.comment-section article p{
+    font-size: 10px;
+}
+
+/* body-albergue */
+.title-albergues {
+    font-size: 40px;
+}
+
+.item-albergue {
+    background-color: #cce0dd;
+    outline: auto;
+}
+
+.item-albergue h2{
+    font-size: 30px;
+    font-style: italic;
+}
+
+
+
+/* Register and Log In */
+.return-link {
+    background-color:#e0ebeb;
+}
+
+.register-form {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.register-form h1 {
+    font-size: 50px;
+    font-weight: bolder;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
