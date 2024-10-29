@@ -1,7 +1,11 @@
 /* Estilo para la web CatManya */
 
 /* Estilos generales */
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
 /* Header */
 header {
@@ -20,96 +24,167 @@ footer{
 }
 
 
-/* Estilos específicos */
-/*header*/
 
-header div h1{
-    font-size: 50px;
-    font-style:oblique;
-    font-weight: bolder;
+/*Estructuras*/
+
+/*Genericos*/
+/*header*/
+.header-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 3fr 1fr;
+    grid-template-areas: 
+    "logo . user"
+    "navbar navbar navbar";
+    padding-left: 5vw;
+    padding-right: 5vw;
 }
 
+.header-logo{
+    grid-area: logo;
+    justify-self:start;
+    align-self: center;
+}
+
+.header-login{
+    grid-area: user;
+    font-weight: bolder;
+    align-self: center;
+    justify-self: end;
+}
+
+.header-navbar{
+    grid-area: navbar;
+    justify-self: normal;
+    align-self: center;
+}
+
+.header-menu{
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+}
+
+/*footer*/
+.footer-division{
+    display: flex;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+}
+
+.footer-title{
+    text-align: center;
+}
+.footer-list{
+    list-style: none;
+    text-align: left;
+}
 
 /*body*/
+/*Estructura de distribución de los posts*/
+.post-preview {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 5fr;
+    grid-template-areas: 
+    "title"
+    "posts";
 
-section.post-preview {
-    background-color: #a7bcb9;
-    font-size: 25px;
-    outline: auto;
 }
 
-section.post-preview article h3{
-    background-color: #a7bcb9;
-    font-size: 20px;
+.section-title{
+    grid-area: title;
 }
 
-section.post-preview article p{
-    font-size: 15px;
-    font-style: italic;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+.section-article_container{
+    display: flex;
+    grid-area: posts;
 }
 
-/*body-posts*/
+/*Estructura Login and Register*/
 
-.generic-post {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    outline: auto;
+.login-page-division{
+    display:grid;
+    grid-template-rows: 0.5fr 20fr 4fr;
+    height: 100vh;
 }
 
-.generic-post h1{
-    font-size: 50px;
-    font-style: italic;
+.login-main-container{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items:center;
 }
 
-.generic-post p{
-    font-size: 20px;
+.login-form{
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    grid-template-areas: 
+    "title"
+    "form";
 }
 
-/*body-comment-section*/
-.comment-section {
-    background-color: #5dacbd;
-    font-size: 20px;
+.register-form{
+    display: grid;
+    grid-template-rows: 1fr 5fr;
+    grid-template-areas: 
+    "title"
+    "form";
 }
 
-.comment-section article header{
-    font-style: italic;
-    font-size: 15px;
+.register-form-title{
+    grid-area: title;
 }
 
-.comment-section article p{
-    font-size: 10px;
+.register-form-form{
+    grid-area: form;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(1, 6fr);
+    align-items: end;
+    align-content: start;
+    grid-template-areas: 
+    "fill1 fill2"
+    "fill3 fill4"
+    "fill5 ."
+    "label1 checkbox1"
+    "label2 checkbox2"
+    "button button";
 }
 
-/* body-albergue */
-.title-albergues {
-    font-size: 40px;
+.form-fill1{
+    grid-area: fill1;
 }
 
-.item-albergue {
-    background-color: #cce0dd;
-    outline: auto;
+.form-fill2{
+    grid-area: fill2;
+}
+.form-fill3{
+    grid-area: fill3;
+}
+.form-fill4{
+    grid-area: fill4;
+}
+.form-fill5{
+    grid-area: fill5;
+}
+.form-label1{
+    grid-area: label1;
+}
+.form-label2{
+    grid-area: label2;
+}
+.form-checkbox1{
+    grid-area: checkbox1;
+}
+.form-checkbox2{
+    grid-area: checkbox2;
+}
+.form-submit{
+    grid-area: button;
 }
 
-.item-albergue h2{
-    font-size: 30px;
-    font-style: italic;
-}
 
-
-
-/* Register and Log In */
-.return-link {
-    background-color:#e0ebeb;
-}
-
-.register-form {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-.register-form h1 {
-    font-size: 50px;
-    font-weight: bolder;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-
+/* Estilos específicos */
