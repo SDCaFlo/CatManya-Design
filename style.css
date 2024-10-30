@@ -98,52 +98,6 @@ footer{
     grid-area: posts;
 }
 
-@media (min-width: 800px){
-    .header-container{
-        padding-left: 5vw;
-        padding-right: 5vw;
-    }
-
-    .footer-division{
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content:space-evenly;
-    }
-}
-
-@media (min-width: 1400px){
-    .header-container{
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 3fr 1fr;
-        grid-template-areas: 
-        "logo . user"
-        "navbar navbar navbar";
-        padding-left: 5vw;
-        padding-right: 5vw;
-    }
-    
-    .header-menu{
-        display: flex;
-        list-style: none;
-        justify-content: space-around;
-    }
-
-/*footer*/
-    .footer-division{
-        padding-left: 10vw;
-        padding-right: 10vw;
-    }
-
-/*posts*/
-    .section-article_container{
-        display: flex;
-        flex-direction: row;
-        grid-area: posts;
-    }
-    
-}
-
-
 
 /*Estructura Login and Register*/
 
@@ -155,13 +109,21 @@ footer{
 
 .login-main-container{
     display:grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 1fr;
     justify-items: center;
     align-items:center;
+    grid-template-areas: 
+    "logo"
+    "form";
+}
+
+.login-form{
+    grid-area: logo;
 }
 
 .login-form{
     display: grid;
+    grid-area: form;
     grid-template-rows: 2fr 1fr;
     grid-template-areas: 
     "title"
@@ -227,6 +189,63 @@ footer{
 .form-submit{
     grid-area: button;
 }
+
+
+@media (min-width: 800px){
+    .header-container{
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+
+    .footer-division{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content:space-evenly;
+    }
+
+    .login-main-container{
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "logo form";
+    }
+
+}
+
+@media (min-width: 1400px){
+    .header-container{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 3fr 1fr;
+        grid-template-areas: 
+        "logo . user"
+        "navbar navbar navbar";
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+    
+    .header-menu{
+        display: flex;
+        list-style: none;
+        justify-content: space-around;
+    }
+
+/*footer*/
+    .footer-division{
+        padding-left: 10vw;
+        padding-right: 10vw;
+    }
+
+/*posts*/
+    .section-article_container{
+        display: flex;
+        flex-direction: row;
+        grid-area: posts;
+    }
+    
+    .login-main-container{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
 
 
 /*Estructura Albergues*/
