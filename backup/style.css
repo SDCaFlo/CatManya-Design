@@ -1,0 +1,317 @@
+/* Estilo para la web CatManya */
+
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+/* Header */
+header {
+    background-color: #5dacbd;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+/* Body */
+body{
+    background-color: #e0ebeb;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+/* Footer */
+footer{
+    background-color: #24527a;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+
+/*Estructuras*/
+
+/*Genericos*/
+/*header*/
+.header-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 3fr 1fr;
+    grid-template-areas: 
+    "logo user"
+    "navbar navbar";
+}
+.header-logo{
+    grid-area: logo;
+    justify-self:start;
+    align-self: center;
+}
+.header-login{
+    grid-area: user;
+    font-weight: bolder;
+    align-self: center;
+    justify-self: end;
+}
+.header-navbar{
+    grid-area: navbar;
+    justify-self: normal;
+    align-self: center;
+}
+.header-menu{
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+}
+
+/*footer*/
+.footer-division{
+    display: flex;
+    flex-direction: column;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+}
+.footer-title{
+    text-align: center;
+}
+.footer-list{
+    list-style: none;
+    text-align: center;
+}
+
+/*body*/
+/*Estructura de distribución de los posts*/
+.post-preview {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 5fr;
+    grid-template-areas: 
+    "title"
+    "posts";
+
+}
+
+.section-title{
+    grid-area: title;
+}
+
+.section-article_container{
+    display: flex;
+    flex-direction: column;
+    grid-area: posts;
+}
+
+
+/*Estructura Login and Register*/
+
+.login-page-division{
+    display:grid;
+    grid-template-rows: 0.5fr 20fr 4fr;
+    height: 100vh;
+}
+
+.login-main-container{
+    display:grid;
+    grid-template-rows: 2fr 1fr;
+    justify-items: center;
+    align-items:center;
+    grid-template-areas: 
+    "logo"
+    "form";
+}
+
+.login-form{
+    grid-area: logo;
+}
+
+.login-form{
+    display: grid;
+    grid-area: form;
+    grid-template-rows: 2fr 1fr;
+    grid-template-areas: 
+    "title"
+    "form";
+}
+
+.register-form{
+    display: grid;
+    grid-template-rows: 1fr 5fr;
+    grid-template-areas: 
+    "title"
+    "form";
+}
+
+.register-form-title{
+    grid-area: title;
+}
+
+.register-form-form{
+    grid-area: form;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(1, 6fr);
+    align-items: end;
+    align-content: start;
+    grid-template-areas: 
+    "fill1 fill2"
+    "fill3 fill4"
+    "fill5 ."
+    "label1 checkbox1"
+    "label2 checkbox2"
+    "button button";
+}
+
+.form-fill1{
+    grid-area: fill1;
+}
+
+.form-fill2{
+    grid-area: fill2;
+}
+.form-fill3{
+    grid-area: fill3;
+}
+.form-fill4{
+    grid-area: fill4;
+}
+.form-fill5{
+    grid-area: fill5;
+}
+.form-label1{
+    grid-area: label1;
+}
+.form-label2{
+    grid-area: label2;
+}
+.form-checkbox1{
+    grid-area: checkbox1;
+}
+.form-checkbox2{
+    grid-area: checkbox2;
+}
+.form-submit{
+    grid-area: button;
+}
+
+
+@media (min-width: 800px){
+    .header-container{
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+
+    .footer-division{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content:space-evenly;
+    }
+
+    .login-main-container{
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "logo form";
+    }
+
+}
+
+@media (min-width: 1400px){
+    .header-container{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 3fr 1fr;
+        grid-template-areas: 
+        "logo . user"
+        "navbar navbar navbar";
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+    
+    .header-menu{
+        display: flex;
+        list-style: none;
+        justify-content: space-around;
+    }
+
+/*footer*/
+    .footer-division{
+        padding-left: 10vw;
+        padding-right: 10vw;
+    }
+
+/*posts*/
+    .section-article_container{
+        display: flex;
+        flex-direction: row;
+        grid-area: posts;
+    }
+    
+    .login-main-container{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+
+
+/*Estructura Albergues*/
+
+.albergues-main-container{
+    padding-left: 5vw;
+    padding-right: 5vw;
+    display: grid;
+    grid-template-rows: 1fr 10fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "title"
+    "items";
+    align-items: start;
+    /* max-width: 2000px; */
+    min-height: 800px;
+}
+
+.albergues-title{
+    grid-area: title;
+}
+.albergues-item-container{
+    grid-area: items;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    gap:10px;
+}
+
+.albergues-item{
+    flex-basis: 500px;
+    max-height: 600px;
+    flex-grow: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 3fr 3fr;
+    grid-template-areas: 
+    "title title"
+    "description images"
+    "map images";
+    justify-items: stretch;
+    align-items: stretch;
+    justify-content: start;
+}
+
+.alberguesItem-title{
+    grid-area:title;
+    max-height: 10%;
+}
+
+.alberguesItem-description{
+    grid-area: description;
+    max-width: 50%;
+    max-height: 45%;
+    font-size: 10px;
+}
+
+.alberguesItem-map{
+    grid-area: map;
+    max-width: 250px;
+    max-height: 150px;
+}
+
+.alberguesItem-imgContainer{
+    grid-area: images;
+}
+
+/* Estilos específicos */
