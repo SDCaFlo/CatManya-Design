@@ -8,6 +8,9 @@
     "logo user"
     "navbar navbar";
     background-color: $primary-color;
+    background-image: url('/images/bones-background.png');
+    background-blend-mode: luminosity;
+    background-size: contain;
     column-gap: 20px;
     row-gap: 10px;
     justify-items: center;
@@ -18,6 +21,9 @@
         grid-area: logo;
         &-title{
             text-align: center;
+            color: $cuaternary-color;
+            font-size: 2.7em;
+            backdrop-filter: blur(1px);          
         }
     }
 

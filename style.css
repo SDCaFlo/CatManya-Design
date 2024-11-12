@@ -22,6 +22,9 @@ body {
   grid-template-rows: 3fr 1fr;
   grid-template-areas: "logo user" "navbar navbar";
   background-color: #f0ece2;
+  background-image: url("/images/bones-background.png");
+  background-blend-mode: luminosity;
+  background-size: contain;
   column-gap: 20px;
   row-gap: 10px;
   justify-items: center;
@@ -33,6 +36,9 @@ body {
 }
 .header__logo-title {
   text-align: center;
+  color: #596e79;
+  font-size: 2.7em;
+  backdrop-filter: blur(1px);
 }
 .header__login {
   grid-area: user;
