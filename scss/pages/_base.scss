@@ -1,4 +1,21 @@
+/* Paleta de colores calico */
 $primary-color: #f0ece2; 
 $secondary-color: #dfd3c3; 
 $tertiary-color: #c7b198; 
 $cuaternary-color: #596e79; 
+
+$font-primary: "Gamja Flower", sans-serif;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: $font-primary;
+    font-weight: 400;
+    font-style: normal;
+    color: $cuaternary-color;
+  }
+  

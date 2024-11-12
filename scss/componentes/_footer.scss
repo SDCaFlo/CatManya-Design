@@ -1,0 +1,51 @@
+/*Estilos Header*/
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    background-color: $cuaternary-color;
+    color: $secondary-color;
+    gap: 20px;
+    padding: 15px;
+    align-items: center;
+    justify-content: space-evenly;
+
+    &__panel{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr 4fr;
+        grid-template-areas: "title" "list";
+        min-width: 300px;
+        text-align: center;
+        align-items: end;
+
+        &-title{
+            grid-area: title;
+            font-size: 25px;
+            
+        }
+
+        &-list{
+            grid-area: list;
+            list-style: none;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            align-items: center;
+            justify-content: center;
+
+            &-item{
+                display: inline-block;
+                padding: 1px;
+
+                /*Correción posición iconos*/
+                img {
+                    display: inline-block;
+                    position: relative;
+                    top:4px;
+                }
+            }
+        }
+    }
+}
