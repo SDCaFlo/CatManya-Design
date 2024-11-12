@@ -11,72 +11,96 @@
     <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="login-page-division">
-        <header class="return-link">
-            <a href="../index.html">Volver</a>
-        </header>
-    
-        <main>                <!--Dividimos la sección en dos partes-->
-            <div class="login-main-container">
-                <!--division 1: imagen-->
-                <div>
-                    <img src="../images/calico-paw.webp" alt="cat-logo">
-                </div>
 
-                <!--division 2: formulario-->
-                <div class="register-form">
-                    <h1 class="register-form-title">Únete a nuestra familia!</h1>
-                    <form action="" class="register-form-form">
-                        <input class="form-fill1" type="text" name="nombre" id="nombre" placeholder="Nombre">
-                        <input class="form-fill2" type="text" name="apellido" id="apellido" placeholder="Apellido">
-                        <input class="form-fill3" type="email" name="correo" id="correo" placeholder="Correo">
-                        <input class="form-fill4" type="password" name="password" id="password" placeholder="Contraseña">
-                        <input class="form-fill5" type="text" name="telefono" id="telefono" placeholder="Teléfono">
-                        <input class="form-checkbox1" type="checkbox" name="recibir-correo" id="recibir-correo">
-                        <label class="form-label1" for="recibir-correo">Deseo suscribirme a la bandeja</label>
-                        <input class="form-checkbox2" type="checkbox" name="privacidad" id="privacidad">
-                        <label class="form-label2" for="privacidad">Acepto la <a href="">política de tratamiento de datos</a></label>
-                        <input class="form-submit" type="submit" value="Registrarse">
-                    </form>
-                </div>
-            </div>
+    <header class="return-link">
+        <a class="return-link__button" href="../index.html">Volver</a>
+    </header>
 
-        </main>
-    
-        <footer class="footer">
-            <!--Dividimos el footer en dos partes-->
-            <!--Panel Contactos-->
-            <div class="footer__panel">
-                <h4 class="footer__panel-title">Contáctanos!</h4>
-                <ul class="footer__panel-list">
-                    <li class="footer__panel-list-item"> 
-                        <img src="../images/icons/phone-icon.png" width="20px" height="auto" alt="icon X"> 
-                        Teléfono: 45454545</li>
-                    <li class="footer__panel-list-item">
-                        <img src="../images/icons/whatsapp-icon.png" width="20px" height="auto" alt="icon X"> 
-                        Whatsapp: 123123123</li>
-                    <li class="footer__panel-list-item">
-                        <img src="../images/icons/mail-icon.png" width="20px" height="auto" alt="icon X"> 
-                        Mail: catnya@catnya.com</li>
-                </ul>
-            </div>
-            <!--Panel redes sociales-->
-            <div class="footer__panel">
-                <h4 class="footer__panel-title">Síguenos en ...</h4>
-                <ul class="footer__panel-list">
-                    <li class="footer__panel-list-item">
-                        <img src="../images/icons/facebook-icon.png" width="20px" height="auto" alt="icon X">
-                        @catmanya</li>
-                    <li class="footer__panel-list-item">
-                        <img src="../images/icons/instagram-icon.png" width="20px" height="auto" alt="icon X">
-                        @catmanya</li>
-                    <li class="footer__panel-list-item">
-                        <img src="../images/icons/twitter-icon.png" width="20px" height="auto" alt="icon X">
-                        @catmanya</li>
-                </ul>
-            </div>
-        </footer>
+    <div class="login-page"> 
+    <!--Dividimos la sección en dos partes-->
+        <!--division 1: imagen-->
+        <div class="login-page__content-image">
+            <img src="../images/paw-heart-cut.PNG" alt="cat-logo">
+        </div>
+
+        <!--division 2: formulario-->
+        <div class="login-page__content-form">
+            <h1 class="login-page__content-form-title login-page__content-form-title--register">Únete a nuestra familia!</h1>
+            <form action="" class="register-form">
+                <label class="register-form__label" for="nombre" style="grid-area: label-nombre;">Nombre:</label>
+                <input class="register-form__input" type="text" style="grid-area: input-nombre;"
+                name="nombre" id="nombre" placeholder="John">
+
+                <label class="register-form__label" for="apellido" style="grid-area: label-apellido;">Apellido:</label>
+                <input class="register-form__input" type="text" style="grid-area: input-apellido;"
+                name="apellido" id="apellido" placeholder="Doe">
+
+                <label class="register-form__label" for="email" style="grid-area: label-email;">e-mail:</label>
+                <input class="register-form__input" type="email" style="grid-area: input-email;"
+                name="correo" id="correo" placeholder="your.mail@domain.com">
+
+                <label class="register-form__label" for="telefono" style="grid-area: label-telefono;">Teléfono:</label>
+                <input class="register-form__input" type="number" style="grid-area: input-telefono;"
+                name="telefono" id="telefono" placeholder="55-66-888">
+
+                <label class="register-form__label" for="password" style="grid-area: label-password;">Contraseña:</label>
+                <input class="register-form__input" type="password" style="grid-area: input-password;"
+                name="password" id="password" placeholder="**********">
+         
+                
+                <label class="register-form__label" for="recibir-correo" style="grid-area: mail-sus;">
+                    <input class="register-form__input" type="checkbox" name="recibir-correo" id="recibir-correo">
+                    Deseo suscribirme a la bandeja
+                </label>
+                
+                <label class="register-form__label" for="privacidad" style="grid-area: data-politic;">
+                    <input class="register-form__checkbox" type="checkbox" name="privacidad" id="privacidad">
+                    Acepto la <a href="">política de tratamiento de datos</a>
+                </label>
+
+                <input class="register-form__submit" type="submit" style="grid-area: submit;"
+                value="Registrarse">
+            </form>
+        </div>
+
     </div>
+
+
+    
+    <footer class="footer">
+        <!--Dividimos el footer en dos partes-->
+        <!--Panel Contactos-->
+        <div class="footer__panel">
+            <h4 class="footer__panel-title">Contáctanos!</h4>
+            <ul class="footer__panel-list">
+                <li class="footer__panel-list-item"> 
+                    <img src="../images/icons/phone-icon.png" width="20px" height="auto" alt="icon X"> 
+                    Teléfono: 45454545</li>
+                <li class="footer__panel-list-item">
+                    <img src="../images/icons/whatsapp-icon.png" width="20px" height="auto" alt="icon X"> 
+                    Whatsapp: 123123123</li>
+                <li class="footer__panel-list-item">
+                    <img src="../images/icons/mail-icon.png" width="20px" height="auto" alt="icon X"> 
+                    Mail: catnya@catnya.com</li>
+            </ul>
+        </div>
+        <!--Panel redes sociales-->
+        <div class="footer__panel">
+            <h4 class="footer__panel-title">Síguenos en ...</h4>
+            <ul class="footer__panel-list">
+                <li class="footer__panel-list-item">
+                    <img src="../images/icons/facebook-icon.png" width="20px" height="auto" alt="icon X">
+                    @catmanya</li>
+                <li class="footer__panel-list-item">
+                    <img src="../images/icons/instagram-icon.png" width="20px" height="auto" alt="icon X">
+                    @catmanya</li>
+                <li class="footer__panel-list-item">
+                    <img src="../images/icons/twitter-icon.png" width="20px" height="auto" alt="icon X">
+                    @catmanya</li>
+            </ul>
+        </div>
+    </footer>
+
 
     
 </body>

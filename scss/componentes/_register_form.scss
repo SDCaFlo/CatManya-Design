@@ -1,0 +1,44 @@
+/*Register Form*/
+
+.register-form {
+    font-size: 1em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(8, 1fr);
+    gap: 3px;
+    max-width: 600px;
+    grid-template-areas: 
+    "label-nombre label-apellido"
+    "input-nombre input-apellido"
+    "label-email label-telefono"
+    "input-email input-telefono"
+    "label-password ."
+    "input-password ."
+    "mail-sus data-politic"
+    "submit submit";
+
+    &__label{
+        font-size: 0.8em;
+        align-self: end;
+    }
+
+    &__input{
+        border-radius: 5px;
+        font-family: $font-primary;
+        font-size: 1em;
+    }
+
+    &__submit{
+        border-radius: 5px;
+        border: 2px solid $cuaternary-color;
+        background-color: $primary-color;
+        font-family: $font-primary;
+        font-size: 1em;
+    }
+    
+    &__submit:hover{
+        border: 2px solid $cuaternary-color;
+        background-color: $secondary-color;
+    }
+
+}

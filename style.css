@@ -153,6 +153,37 @@ body {
   border-radius: 5px;
 }
 
+/*Register Form*/
+.register-form {
+  font-size: 1em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(8, 1fr);
+  gap: 3px;
+  max-width: 600px;
+  grid-template-areas: "label-nombre label-apellido" "input-nombre input-apellido" "label-email label-telefono" "input-email input-telefono" "label-password ." "input-password ." "mail-sus data-politic" "submit submit";
+}
+.register-form__label {
+  font-size: 0.8em;
+  align-self: end;
+}
+.register-form__input {
+  border-radius: 5px;
+  font-family: "Gamja Flower", sans-serif;
+  font-size: 1em;
+}
+.register-form__submit {
+  border-radius: 5px;
+  border: 2px solid #596e79;
+  background-color: #f0ece2;
+  font-family: "Gamja Flower", sans-serif;
+  font-size: 1em;
+}
+.register-form__submit:hover {
+  border: 2px solid #596e79;
+  background-color: #dfd3c3;
+}
+
 /*Importación de páginas*/
 /*Estilos para la pagina main.html
 Contiene principalmente la división necesaria y los MQs
@@ -163,6 +194,7 @@ Contiene principalmente la división necesaria y los MQs
   min-height: 70vh;
   align-items: center;
   justify-content: center;
+  padding-bottom: 50px;
 }
 .login-page__content-image img {
   display: block;
@@ -172,11 +204,15 @@ Contiene principalmente la división necesaria y los MQs
 }
 .login-page__content-form {
   padding: 10px;
+  /*Modificador para la pagina de registro*/
 }
 .login-page__content-form-title {
   font-size: 3em;
   padding-bottom: 10px;
   color: #596e79;
+}
+.login-page__content-form-title--register {
+  font-size: 2.5em;
 }
 .login-page__content-form-passrecovery {
   display: block;

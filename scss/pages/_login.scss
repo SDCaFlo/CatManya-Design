@@ -8,6 +8,7 @@ Contiene principalmente la división necesaria y los MQs
     min-height: 70vh;
     align-items: center;
     justify-content: center;
+    padding-bottom: 50px;
 
     &__content-image{
         img {
@@ -25,6 +26,11 @@ Contiene principalmente la división necesaria y los MQs
          font-size: 3em;
          padding-bottom: 10px;
          color: $cuaternary-color;
+        }
+
+        /*Modificador para la pagina de registro*/
+        &-title--register{
+            font-size: 2.5em;
         }
 
         &-passrecovery{
