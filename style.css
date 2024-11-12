@@ -373,6 +373,7 @@ body {
   grid-template-areas: "title" "_text " "image-container" "map";
   gap: 10px;
   align-items: center;
+  max-width: 450px;
 }
 .albergues-card__title {
   grid-area: title;
@@ -396,10 +397,13 @@ body {
   border-radius: 5px;
   border: 2px solid #dfd3c3;
 }
-@media (min-width: 768px) {
+@media (min-width: 1240px) {
   .albergues-card {
-    padding-left: 100px;
-    padding-right: 100px;
+    max-width: 700px;
+    grid-template-columns: 1fr 1.5fr;
+    grid-template-rows: 0.2fr 2fr 1fr;
+    grid-template-areas: "title title" "_text image-container" "map image-container";
+    align-items: stretch;
   }
 }
 
@@ -570,6 +574,20 @@ Contiene principalmente la división necesaria y los MQs
   gap: 20px;
   padding: 10px;
   align-items: center;
+}
+@media (min-width: 768px) {
+  .albergues {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+  .albergues__container {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .albergues__title {
+    text-align: center;
+    font-size: 3em;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

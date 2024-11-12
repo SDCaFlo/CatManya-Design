@@ -14,4 +14,18 @@
         padding: 10px;
         align-items: center;
     }
+
+    @include respond-to(medium){
+        margin-left: 100px;
+        margin-right: 100px;
+        &__container{
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        &__title{
+            text-align: center;
+            font-size: 3em;
+        }
+    }
 }
