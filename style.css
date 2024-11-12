@@ -272,6 +272,41 @@ body {
   margin-left: 20px;
 }
 
+.albergues-card {
+  border: 2px solid #596e79;
+  padding: 20px;
+  width: 80%;
+  height: 80%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 3fr 4fr 4fr;
+  grid-template-areas: "title" "_text " "image-container" "map";
+  gap: 10px;
+  align-items: center;
+}
+.albergues-card__title {
+  grid-area: title;
+}
+.albergues-card__text {
+  grid-area: _text;
+}
+.albergues-card__map {
+  grid-area: map;
+  width: 100%;
+  border-radius: 5px;
+  border: 2px solid #dfd3c3;
+}
+.albergues-card__image-container {
+  grid-area: image-container;
+  display: flex;
+}
+.albergues-card__image-container-item {
+  display: inline-block;
+  width: 100%;
+  border-radius: 5px;
+  border: 2px solid #dfd3c3;
+}
+
 /*Importación de páginas*/
 /*Estilos para la pagina main.html
 Contiene principalmente la división necesaria y los MQs
@@ -382,6 +417,22 @@ Contiene principalmente la división necesaria y los MQs
 }
 .post__article-section-text {
   grid-area: _text;
+}
+
+.albergues {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.albergues__title {
+  margin-top: 20px;
+  font-size: 2em;
+}
+.albergues__container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px;
+  align-items: center;
 }
 
 /*# sourceMappingURL=style.css.map */

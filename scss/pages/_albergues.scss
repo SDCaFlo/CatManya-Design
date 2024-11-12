@@ -1,0 +1,17 @@
+.albergues{
+    margin-left: 5px;
+    margin-right: 5px;
+
+    &__title{
+        margin-top: 20px;
+        font-size: 2em;
+    }
+
+    &__container{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 10px;
+        align-items: center;
+    }
+}
