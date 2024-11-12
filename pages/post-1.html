@@ -39,41 +39,39 @@
 
     </header>
 
-    <main>
+    <main class="post">
         <!--Articulo: Post en si.-->
-        <article class="generic-post">
+        <article class="post__article-section">
             <!--Cuerpo del articulo/post-->
-            <h1>Título del post</h1>
-            <img src="../images/gato-fest.jpg" alt="imagen-referencial">
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui animi ipsum natus asperiores iste harum
+            <h1 class="post__article-section-title">Título del post</h1>
+            <img class="post__article-section-image" src="../images/post-1.jpg" alt="imagen-referencial">
+            <p class="post__article-section-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui animi ipsum natus asperiores iste harum
                 eveniet minima veniam perferendis quaerat accusamus modi unde repellat consectetur, doloremque voluptas
                 in dolor commodi?</p>
         </article>
         <!--Sección de comentarios-->
         <section class="comment-section">
             <!--Creamos una división entre el formulario y los comentarios ya existentes-->
-            <div>
                 <!--Formulario nuevo comentario-->
-                <div>
-                    <p>¿Tienes alguna opinión? Deja tu comentario!</p>
-                    <form action="">
-                        <textarea name="comentario" id="comentario"></textarea>
-                        <input type="submit" value="Comentar">
-                    </form>
-                </div>
-                    
-                <!--Comentarios previos-->
-                <div>
-                    <h2>Comentarios</h2>
-                    <article>
-                        <header>Comentario de: Ana</header>
-                        <p>¿La entrada es gratis?</p>
-                    </article>
-                    <article>
-                        <header>Comentario de: Peter</header>
-                        <p>Qué tal. Hay estacionamiento libre?</p>
-                    </article>
-                </div>
+            <div class="comment-section__comment-box">
+                <p class="comment-section__comment-box-title">¿Tienes alguna opinión? Deja tu comentario!</p>
+                <form class="comment-section__comment-box-form" action="">
+                    <textarea class="comment-section__comment-box-form-textarea" name="comentario" id="comentario"></textarea>
+                    <input class="comment-section__comment-box-form-input" type="submit" value="Comentar">
+                </form>
+            </div>
+                
+            <!--Comentarios previos-->
+            <div class="comment-section__comment-reel">
+                <h2 class="comment-section__comment-reel-title">Comentarios</h2>
+                <article class="comment-section__comment-reel-entry">
+                    <header class="comment-section__comment-reel-entry-name">Comentario de: Ana</header>
+                    <p class="comment-section__comment-reel-entry-text">¿La entrada es gratis?</p>
+                </article>
+                <article class="comment-section__comment-reel-entry">
+                    <header class="comment-section__comment-reel-entry-name">Comentario de: Peter</header>
+                    <p class="comment-section__comment-reel-entry-text">Qué tal. Hay estacionamiento libre?</p>
+                </article>
             </div>
         </section>
     </main>

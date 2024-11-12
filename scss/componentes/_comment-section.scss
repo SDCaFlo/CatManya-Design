@@ -1,0 +1,57 @@
+.comment-section {
+    padding: 10px;
+    align-self: start;
+    display: block;
+
+    &__comment-box{
+        padding: 20px;
+        &-title{
+            font-size: 1.2em;
+        }
+
+        &-form{
+            display: grid;
+            grid-template-columns: 4fr 1fr;
+            grid-template-rows: 1fr;
+            grid-template-areas: 
+            "textarea input";
+            gap: 5px;
+            
+            &-textarea{
+                grid-area: textarea;
+                min-width: 300px;
+                min-height: 50px;
+
+            }
+
+            &-input{
+                grid-area:input;
+                border-radius: 5px;
+                border: 2px solid $cuaternary-color;
+                background-color: $primary-color;
+                font-family: $font-primary;
+                font-size: 1em;
+            }
+
+            &-input:hover{
+                border: 2px solid $cuaternary-color;
+                background-color: $secondary-color;
+            }
+
+
+        }
+    }
+
+    &__comment-reel{
+        padding: 20px;
+
+        &-entry{
+            margin-top: 5px;
+            margin-bottom: 10px;
+
+            &-text{
+                margin-left: 20px;
+            }
+        }
+    }
+}
