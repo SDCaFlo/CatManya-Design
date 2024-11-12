@@ -48,4 +48,17 @@
             }
         }
     }
+
+    
+    @include respond-to(medium){
+        padding-left: 100px;
+        padding-right: 100px;
+        flex-direction: row;
+    }
+
+    
+    @include respond-to(large){
+        padding-left: 130px;
+        padding-right: 130px;
+    }
 }

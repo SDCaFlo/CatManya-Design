@@ -1,3 +1,7 @@
+/*Breakpoints para Media Queries*/
+$breakpoint-md: 768px;
+$breakpoint-lg: 1240px;
+
 /* Paleta de colores calico */
 $primary-color: #f0ece2; 
 $secondary-color: #dfd3c3; 
@@ -18,4 +22,13 @@ $font-primary: "Gamja Flower", sans-serif;
     font-style: normal;
     color: $cuaternary-color;
   }
-  
+
+
+/*Mixin para MQs*/
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == medium {
+    @media (min-width: $breakpoint-md) { @content; }
+  } @else if $breakpoint == large {
+    @media (min-width: $breakpoint-lg) { @content; }
+  } 
+}

@@ -40,7 +40,7 @@
             text-align: center;
             text-decoration: none;
             font-weight: bold;
-            display: inline-block;
+            display: block;
             width: 140px;
             padding: 10px;
             border: 2px solid $tertiary-color;
@@ -56,7 +56,6 @@
 
     &__navbar {
         grid-area: navbar;
-        min-width: 85vw;
         margin-bottom: 20px;
         flex: 1 1 30%;
         &-menu{
@@ -70,6 +69,7 @@
             &-item{
                 display: block;
                 flex-basis: 30%;
+                text-align: center;
 
                 &-link {
                     width: 120px;
@@ -78,7 +78,7 @@
                     text-decoration: none;
                     padding: 1px 1px;
                     font-weight: bold;
-                    display: block;
+                    display: inline-block;
                     text-align: center;
                     background-color: $primary-color;
                     color: $cuaternary-color;
@@ -88,6 +88,39 @@
                     border: 2px inset $tertiary-color;
                 }
             }
+        }
+    }
+
+    /*Media Query Medium*/
+    @include respond-to(medium){
+        padding-left: 100px;
+        padding-right: 100px;
+        
+        &__logo{
+            justify-self: start;
+        }
+    
+        &__login{
+            justify-self: end;
+        }
+
+        &__navbar{
+            &-menu{
+                flex-wrap: nowrap;
+                &-item{
+                    flex-basis: auto;
+                }
+            }
+        }
+    }
+
+    @include respond-to(large){
+        padding-left: 130px;
+        padding-right: 130px;
+
+        &__login{
+            justify-self: end;
+            flex-direction: row;
         }
     }
 }
