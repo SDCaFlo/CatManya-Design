@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/*Importación base*/
 /* Paleta de colores calico */
 * {
   margin: 0;
@@ -13,6 +14,7 @@ body {
   color: #596e79;
 }
 
+/*Importación de elementos*/
 /*Estilos Header*/
 .header {
   display: grid;
@@ -134,6 +136,89 @@ body {
   display: inline-block;
   position: relative;
   top: 4px;
+}
+
+/*Estilo básico para return-link, se encuentra en LOGIN y REGISTER html*/
+.return-link {
+  text-align: left;
+  padding: 10px;
+}
+.return-link__button {
+  text-decoration: none;
+  display: inline-block;
+  padding: 5px;
+  font-weight: bold;
+  color: #596e79;
+  border: 1px solid #f0ece2;
+  border-radius: 5px;
+}
+
+/*Importación de páginas*/
+/*Estilos para la pagina main.html
+Contiene principalmente la división necesaria y los MQs
+*/
+.login-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 70vh;
+  align-items: center;
+  justify-content: center;
+}
+.login-page__content-image img {
+  display: block;
+  width: 80vw;
+  max-width: 500px;
+  height: auto;
+}
+.login-page__content-form {
+  padding: 10px;
+}
+.login-page__content-form-title {
+  font-size: 3em;
+  padding-bottom: 10px;
+  color: #596e79;
+}
+.login-page__content-form-passrecovery {
+  display: block;
+  padding-top: 10px;
+}
+.login-page__content-form-form {
+  font-size: 1em;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "labelcorreo inputcorreo submit" "labelpassword inputpassword submit";
+  gap: 3px;
+}
+.login-page__content-form-form-labelcorreo {
+  grid-area: labelcorreo;
+}
+.login-page__content-form-form-inputcorreo {
+  grid-area: inputcorreo;
+  border-radius: 5px;
+  font-family: "Gamja Flower", sans-serif;
+  font-size: 1em;
+}
+.login-page__content-form-form-labelpassword {
+  grid-area: labelpassword;
+}
+.login-page__content-form-form-inputpassword {
+  grid-area: inputpassword;
+  border-radius: 5px;
+  font-family: "Gamja Flower", sans-serif;
+  font-size: 1em;
+}
+.login-page__content-form-form-submit {
+  grid-area: submit;
+  border-radius: 5px;
+  border: 2px solid #596e79;
+  background-color: #f0ece2;
+  font-family: "Gamja Flower", sans-serif;
+  font-size: 1em;
+}
+.login-page__content-form-form-submit:hover {
+  border: 2px solid #596e79;
+  background-color: #dfd3c3;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,3 +1,10 @@
+/*Importación base*/
 @import './pages/base';
+
+/*Importación de elementos*/
 @import './componentes/header';
 @import './componentes/footer';
+@import './componentes/return-link';
+
+/*Importación de páginas*/
+@import './pages/login'
