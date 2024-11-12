@@ -86,4 +86,14 @@ Contiene principalmente la división necesaria y los MQs
             }
         }
     }
+
+    @include respond-to(medium){
+        justify-content: space-around;
+        flex-direction: row;
+    }
+
+    @include respond-to(large){
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
 }

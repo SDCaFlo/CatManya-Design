@@ -54,4 +54,12 @@
             }
         }
     }
+
+    @include respond-to(medium){
+        margin-left: 100px;
+    }
+
+    @include respond-to(medium){
+        margin-left: 250px;
+    }
 }
