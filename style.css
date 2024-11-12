@@ -184,6 +184,48 @@ body {
   background-color: #dfd3c3;
 }
 
+.main-section {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.main-section__title {
+  margin-top: 20px;
+  font-size: 2em;
+}
+.main-section__article-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 2px;
+  align-items: center;
+}
+
+.article {
+  max-width: 450px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 10fr 2fr;
+}
+.article__title {
+  font-size: 1.3em;
+  align-self: self-end;
+}
+.article__title-link {
+  text-decoration: none;
+  color: #c7b198;
+}
+.article__thumbnail {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-height: 500px;
+  object-fit: cover;
+}
+.article__text {
+  padding: 2px;
+  text-align: center;
+}
+
 /*Importación de páginas*/
 /*Estilos para la pagina main.html
 Contiene principalmente la división necesaria y los MQs
@@ -255,6 +297,13 @@ Contiene principalmente la división necesaria y los MQs
 .login-page__content-form-form-submit:hover {
   border: 2px solid #596e79;
   background-color: #dfd3c3;
+}
+
+.main-page {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /*# sourceMappingURL=style.css.map */

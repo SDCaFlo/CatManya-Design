@@ -1,0 +1,46 @@
+.main-section{
+    margin-left: 5px;
+    margin-right: 5px;
+    &__title{
+        margin-top: 20px;
+        font-size: 2em;
+    }
+
+    &__article-container{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 2px;
+        align-items: center;
+    }
+}
+
+.article{
+    max-width: 450px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 10fr 2fr;
+
+    &__title{
+        font-size:1.3em;
+        align-self:self-end;
+        &-link{
+            text-decoration: none;
+            color: $tertiary-color;
+        }
+    }
+
+    &__thumbnail{
+        display: block;
+        width: 100%;
+        height: 100%;
+        max-height: 500px;
+        object-fit: cover;
+
+    }
+
+    &__text{
+        padding: 2px;
+        text-align: center;
+    }
+}
